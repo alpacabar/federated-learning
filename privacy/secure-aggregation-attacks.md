@@ -55,7 +55,7 @@ _Last updated: 2026-11-27_
 | Central (aggregate-level) DP | Lattice attack (A) | Yu et al.: breaks exact recovery. A noise-tolerant variant still recovers about 25–50% of the true vectors. |
 | Local DP | Lattice attack (A) | Weak: the algebraic structure survives, so protection depends only on noise magnitude. |
 | Info-theoretic decentralized SA | All of (A), in theory | Zhang et al. (arXiv 2508.00596). Rate bounds only, with no evaluation against real attacks. |
-| One-shot SA with input soundness (TACITA) | Server tampering with ciphertexts (CFL) | Madathil et al. (CCS 2026). Single server plus a decryption committee; assumes a PKI. Per-aggregation only, so multi-round leakage, sybils and DFL topologies are out of scope. |
+| One-shot SA with input soundness (TACITA) | Server fabricating or dropping ciphertexts; residual leakage; model inconsistency via `tag = H(iteration‖model)` (CFL) | Madathil et al. (CCS 2026). Single server plus a one-shot committee; MKLHTS gives O(1) server→committee messages. Assumes a PKI, a trusted CRS and an honest majority of clients and committee. Per-aggregation only, so multi-round leakage and DFL topologies are out of scope. Also shows that **Willow** lacks input soundness. |
 | Non-forward secure aggregation (NFSA) | — | Zhou (CCS 2026). Single-server SA via two-layer secret sharing; not yet read. |
 
 ---
